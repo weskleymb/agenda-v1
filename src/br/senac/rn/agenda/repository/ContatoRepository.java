@@ -9,4 +9,12 @@ public class ContatoRepository {
 
     private static List<Contato> contatos = new ArrayList<Contato>();
 
+    public void salva(Contato contato) {
+        contatos.add(contato);
+    }
+
+    public List<Contato> buscaTodos() {
+        return contatos;
+    }
+
 }
