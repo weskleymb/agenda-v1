@@ -7,6 +7,7 @@ import java.util.List;
 
 public class ContatoRepository {
 
+//    private static Long id = 0L;
     private static List<Contato> contatos = new ArrayList<Contato>();
 
     public void salva(Contato contato) {
@@ -16,7 +17,17 @@ public class ContatoRepository {
     }
 
     public List<Contato> buscaTodos() {
-        return contatos;
+        List<Contato> copiaContatos = new ArrayList<Contato>(contatos);
+        return copiaContatos;
+    }
+
+    public Contato buscaPeloId(Long id) {
+        for (Contato contato : contatos) {
+            if (contato.getId().equals(id)) {
+                return contato;
+            }
+        }
+        return null;
     }
 
 }
