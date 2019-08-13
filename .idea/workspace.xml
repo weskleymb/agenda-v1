@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f13a0d0-dcb5-4c5a-8cf4-f3a6f6df7672" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/senac/rn/agenda/TestaPrograma.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/agenda-v1/br/senac/rn/agenda/TestaPrograma.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/agenda-v1/br/senac/rn/agenda/TestaPrograma.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/agenda-v1/br/senac/rn/agenda/repository/ContatoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/agenda-v1/br/senac/rn/agenda/repository/ContatoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/senac/rn/agenda/TestaPrograma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/senac/rn/agenda/TestaPrograma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/senac/rn/agenda/model/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/senac/rn/agenda/model/Contato.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/senac/rn/agenda/repository/ContatoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/senac/rn/agenda/repository/ContatoRepository.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

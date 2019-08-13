@@ -11,6 +11,8 @@ public class ContatoRepository {
 
     public void salva(Contato contato) {
         contatos.add(contato);
+        Long id = Long.valueOf(contatos.size());
+        contato.setId(id);
     }
 
     public List<Contato> buscaTodos() {
