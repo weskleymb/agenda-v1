@@ -7,13 +7,13 @@ import java.util.List;
 
 public class ContatoRepository {
 
-//    private static Long id = 0L;
+    private static Long id = 0L;
     private static List<Contato> contatos = new ArrayList<Contato>();
 
     public void salva(Contato contato) {
-        contatos.add(contato);
-        Long id = Long.valueOf(contatos.size());
+        id++;
         contato.setId(id);
+        contatos.add(contato);
     }
 
     public List<Contato> buscaTodos() {
@@ -28,6 +28,28 @@ public class ContatoRepository {
             }
         }
         return null;
+    }
+
+    public Contato buscaPeloNome(String nome) {
+        for (Contato contato : contatos) {
+            if (contato.getNome().equals(nome)) {
+                return contato;
+            }
+        }
+        return null;
+    }
+
+    public void remove(Contato contato) {
+        contatos.remove(contato);
+    }
+
+    public void edita(Contato contato) {
+        for (Contato c: contatos) {
+            if (c.getId().equals(contato.getId())) {
+                int indice = contatos.indexOf(c);
+                contatos.set(indice, contato);
+            }
+        }
     }
 
 }

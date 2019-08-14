@@ -1,5 +1,7 @@
 package br.senac.rn.agenda.model;
 
+import java.util.Objects;
+
 public class Contato {
 
     private Long id;
@@ -35,6 +37,20 @@ public class Contato {
 
     public void setFone(String fone) {
         this.fone = fone;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Contato contato = (Contato) o;
+        return Objects.equals(nome, contato.nome) &&
+                Objects.equals(fone, contato.fone);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome);
     }
 
 }
