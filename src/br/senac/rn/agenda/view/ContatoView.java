@@ -24,9 +24,60 @@ public class ContatoView {
                 case 2:
                     ContatoView.listarTodos();
                     break;
+                case 3:
+                    ContatoView.buscarPeloNome();
+                    break;
+                case 4:
+                    ContatoView.editarContato();
+                    break;
             }
         } while (escolha != 0);
         System.exit(0);
+    }
+
+    private static void editarContato() {
+        System.out.println("Informe o nome do contato desejado:");
+        String nome = entrada.next();
+        Contato contato = repository.buscaPeloNome(nome);
+        if (contato == null) {
+            System.out.println("Contato não existe");
+        } else {
+            System.out.println("Deseja alterar o nome? (s ou n)");
+
+            String respostaNome = entrada.next();
+            if (respostaNome.equals("s")) {
+                System.out.println("Informe o novo nome:");
+                String novoNome = entrada.next();
+                contato.setNome(novoNome);
+            }
+
+            System.out.println("Deseja alterar o fone? (s ou n)");
+            String respostaFone = entrada.next();
+            if (respostaFone.equals("s")) {
+                System.out.println("Informe o novo fone:");
+                String novoFone = entrada.next();
+                contato.setFone(novoFone);
+            }
+
+            repository.edita(contato);
+        }
+    }
+
+    private static void buscarPeloNome() {
+        System.out.println("Informe o nome do contato desejado:");
+        String nome = entrada.next();
+        Contato contato = repository.buscaPeloNome(nome);
+        if (contato == null) {
+            System.out.println("Contato não existe");
+        } else {
+            String id = contato.getId().toString();
+            String nomeContato = contato.getNome();
+            String fone = contato.getFone();
+
+            String resposta = id + " - " + nomeContato + " - " + fone;
+
+            System.out.println(resposta);
+        }
     }
 
     private static void listarTodos() {
